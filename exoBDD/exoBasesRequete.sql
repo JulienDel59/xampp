@@ -1,5 +1,9 @@
 SELECT * FROM personnage;
 SELECT * FROM arme;
+SELECT nom,levelMin FROM arme;
+SELECT nom , surnom , level FROM personnage ;
+SELECT nom AS Pseudo, level AS Niveau FROM personnage ; 
+SELECT libelle AS "type d'armes du jeu" FROM typearme ;
 SELECT COUNT(*) as "Nombre d'armes" FROM arme;
 SELECT COUNT(*) as "Nombre de personnage" FROM personnage;
 SELECT AVG(level) as "Moyenne de niveau" FROM personnage;
