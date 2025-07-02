@@ -1,0 +1,18 @@
+SELECT * FROM personnage;
+SELECT * FROM arme;
+SELECT COUNT(*) as "Nombre d'armes" FROM arme;
+SELECT COUNT(*) as "Nombre de personnage" FROM personnage;
+SELECT AVG(level) as "Moyenne de niveau" FROM personnage;
+SELECT SUM(baseForce) as "Points de force" , SUM(baseAgi) as " Points d'agilité" , SUM(baseIntel) as "Point d'agilité" FROM classe;
+SELECT MIN(levelMin) as "MIN(levelMin)" , MAX(levelMin) as "MAX(levelMin)" FROM arme;
+SELECT nom, baseForce+baseAgi+baseIntel FROM `classe`;
+SELECT CONCAT(nom,' ',surnom ) as personnage FROM `personnage`;
+SELECT CONCAT(nom,':',' ','F:',baseForce,' ','A:',baseAgi,' ','I:',baseIntel) as classe FROM classe;
+SELECT LEFT(nom, 6 ) FROM personnage;
+SELECT SUBSTRING(nom, 1, 6) as substring FROM personnage;
+SELECT CONCAT(LEFT(nom, 5),'-',LEFT(description, 20)) AS classe FROM classe;
+SELECT CONCAT(SUBSTRING(nom, 1,5),'-',SUBSTRING(description, 1,20)) AS classe FROM classe;
+SELECT * FROM arme WHERE levelMin > 5;
+SELECT * FROM arme WHERE degat < 25;
+SELECT nom , surnom FROM personnage WHERE level = 10;
+SELECT * FROM typearme WHERE estDistance = 1;
