@@ -22,18 +22,18 @@ SELECT CONCAT(nom,' ',surnom ) as personnage FROM `personnage`;
 SELECT CONCAT(nom,':',' ','F:',baseForce,' ','A:',baseAgi,' ','I:',baseIntel) as classe FROM classe;
 SELECT LEFT(nom, 6 ) FROM personnage;
 SELECT SUBSTRING(nom, 1, 6) as substring FROM personnage;
+SELECT CONCAT(LEFT(nom, 5),'-',LEFT(description, 20)) AS classe FROM classe;
 
 --  WHERE
 
-SELECT CONCAT(LEFT(nom, 5),'-',LEFT(description, 20)) AS classe FROM classe;
-SELECT CONCAT(SUBSTRING(nom, 1,5),'-',SUBSTRING(description, 1,20)) AS classe FROM classe;
+
 SELECT * FROM arme WHERE levelMin > 5;
 SELECT * FROM arme WHERE degat < 25;
+SELECT nom , surnom FROM personnage WHERE level = 10;
+SELECT * FROM typearme WHERE estDistance = 1;
 
 -- AND / OR / BETWEEN
 
-SELECT nom , surnom FROM personnage WHERE level = 10;
-SELECT * FROM typearme WHERE estDistance = 1;
 SELECT * FROM arme WHERE levelMIn >=4 AND levelMIn <=8;
 SELECT * FROM personnage WHERE idPersonnage <=3 AND level =10;
 SELECT nom , levelMin FROM arme WHERE levelMin <4 OR levelMin >8;
